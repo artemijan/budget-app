@@ -30,9 +30,16 @@ class BudgetToGroupRelation(AbstractAuditableModel):
     budget = models.ForeignKey('budget.Budget', on_delete=models.CASCADE)
 
 
+class BudgetGroupToUserRelation(AbstractAuditableModel):
+    group = models.ForeignKey('budget.BudgetGroup', on_delete=models.CASCADE)
+    collaborator = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+
+
 class BudgetGroup(AbstractAuditableModel):
     name = models.CharField(_("Group name"), max_length=255)
     budgets = models.ManyToManyField('budget.Budget', through='budget.BudgetToGroupRelation')
+    collaborators = models.ManyToManyField(settings.AUTH_USER_MODEL,
+                                           through='budget.BudgetGroupToUserRelation')
 
     def __str__(self):
         return f"Budget group {self.name}"
