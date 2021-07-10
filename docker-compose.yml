@@ -1,0 +1,45 @@
+version: "3.1"
+services:
+  budget_postgres:
+    image: postgres:13.3
+    container_name: "budget_postgre_db"
+    environment:
+      POSTGRES_DB: "budget_db"
+      POSTGRES_USER: "budget_user"
+      POSTGRES_PASSWORD: "budget_password"
+    ports:
+      - "5437:5432"
+    command: postgres -c fsync=off -c synchronous_commit=off -c full_page_writes=off
+
+  budjet_elastic_search:
+    image: elasticsearch:2.4
+    container_name: "budget_elasticsearch"
+    environment:
+      http.host: 0.0.0.0
+      transport.host: 127.0.0.1
+    ports:
+      - "9207:9200"
+
+  budget_memcached:
+    image: memcached:1.5.4
+    ports:
+      - "11211:11211"
+
+  budget_rabbitmq:
+    image: rabbitmq:3.8.6-management
+    environment:
+      RABBITMQ_DEFAULT_USER: "budget_user"
+      RABBITMQ_DEFAULT_PASS: "budget_password"
+    ports:
+      - 5672:5672
+      - 15672:15672
+
+  budget_flower:
+    image: mher/flower:0.9.5
+    ports:
+      - "5555:5555"
+    depends_on:
+      - budget_rabbitmq
+    links:
+      - "budget_rabbitmq"
+    command: '--broker="amqp://budget_user:budget_password@budget_rabbitmq:5672//"'
