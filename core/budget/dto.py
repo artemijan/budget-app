@@ -1,4 +1,5 @@
 # Serializers define the API representation.
+from django.conf import settings
 from rest_framework import serializers
 
 from core.budget.models import Budget, BudgetGroup
@@ -9,7 +10,7 @@ class BudgetSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = Budget
-        fields = ('name', 'groups', 'owner')
+        fields = ('url', 'name', 'groups', 'owner')
 
 
 class BudgetGroupSerializer(serializers.HyperlinkedModelSerializer):
@@ -18,4 +19,8 @@ class BudgetGroupSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = BudgetGroup
-        fields = ('name', 'budgets', 'collaborators')
+        fields = ('url', 'name', 'budgets', 'collaborators')
+
+
+class CollaboratorSerializer(serializers.Serializer):
+    id = serializers.IntegerField(min_value=0)
