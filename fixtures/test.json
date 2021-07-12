@@ -1,0 +1,751 @@
+[
+  {
+    "model": "admin.logentry",
+    "pk": 1,
+    "fields": {
+      "action_time": "2021-07-10T08:44:53.357Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "1",
+      "object_repr": "Budget object (1)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}, {\"added\": {\"name\": \"transfer\", \"object\": \"Transfer object (1)\"}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 2,
+    "fields": {
+      "action_time": "2021-07-10T08:46:08.841Z",
+      "user": 1,
+      "content_type": 7,
+      "object_id": "1",
+      "object_repr": "Budget: New Budget",
+      "action_flag": 2,
+      "change_message": "[{\"added\": {\"name\": \"transfer\", \"object\": \"Transfer object (2)\"}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 3,
+    "fields": {
+      "action_time": "2021-07-10T09:00:45.921Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "1",
+      "object_repr": "BudgetGroup object (1)",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 4,
+    "fields": {
+      "action_time": "2021-07-10T09:03:53.344Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "1",
+      "object_repr": "Budget group dfvefefe",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Group name\"]}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 5,
+    "fields": {
+      "action_time": "2021-07-10T09:13:23.603Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "1",
+      "object_repr": "Budget group dfvefefe",
+      "action_flag": 2,
+      "change_message": "[{\"added\": {\"name\": \"budget to group relation\", \"object\": \"BudgetToGroupRelation object (1)\"}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 6,
+    "fields": {
+      "action_time": "2021-07-10T10:23:47.161Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "1",
+      "object_repr": "Budget group Budget group",
+      "action_flag": 2,
+      "change_message": "[{\"changed\": {\"fields\": [\"Group name\"]}}, {\"added\": {\"name\": \"budget group to user relation\", \"object\": \"BudgetGroupToUserRelation object (1)\"}}]"
+    }
+  },
+  {
+    "model": "admin.logentry",
+    "pk": 7,
+    "fields": {
+      "action_time": "2021-07-11T14:50:55.092Z",
+      "user": 1,
+      "content_type": 10,
+      "object_id": "1",
+      "object_repr": "Budget group Budget group",
+      "action_flag": 2,
+      "change_message": "[{\"deleted\": {\"name\": \"budget group to user relation\", \"object\": \"BudgetGroupToUserRelation object (None)\"}}, {\"deleted\": {\"name\": \"budget group to user relation\", \"object\": \"BudgetGroupToUserRelation object (None)\"}}]"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+      "name": "Can add log entry",
+      "content_type": 1,
+      "codename": "add_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+      "name": "Can change log entry",
+      "content_type": 1,
+      "codename": "change_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+      "name": "Can delete log entry",
+      "content_type": 1,
+      "codename": "delete_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+      "name": "Can view log entry",
+      "content_type": 1,
+      "codename": "view_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+      "name": "Can add permission",
+      "content_type": 2,
+      "codename": "add_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+      "name": "Can change permission",
+      "content_type": 2,
+      "codename": "change_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+      "name": "Can delete permission",
+      "content_type": 2,
+      "codename": "delete_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+      "name": "Can view permission",
+      "content_type": 2,
+      "codename": "view_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+      "name": "Can add group",
+      "content_type": 3,
+      "codename": "add_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+      "name": "Can change group",
+      "content_type": 3,
+      "codename": "change_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+      "name": "Can delete group",
+      "content_type": 3,
+      "codename": "delete_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+      "name": "Can view group",
+      "content_type": 3,
+      "codename": "view_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+      "name": "Can add content type",
+      "content_type": 4,
+      "codename": "add_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+      "name": "Can change content type",
+      "content_type": 4,
+      "codename": "change_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+      "name": "Can delete content type",
+      "content_type": 4,
+      "codename": "delete_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+      "name": "Can view content type",
+      "content_type": 4,
+      "codename": "view_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+      "name": "Can add session",
+      "content_type": 5,
+      "codename": "add_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+      "name": "Can change session",
+      "content_type": 5,
+      "codename": "change_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+      "name": "Can delete session",
+      "content_type": 5,
+      "codename": "delete_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+      "name": "Can view session",
+      "content_type": 5,
+      "codename": "view_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+      "name": "Can add user",
+      "content_type": 6,
+      "codename": "add_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+      "name": "Can change user",
+      "content_type": 6,
+      "codename": "change_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+      "name": "Can delete user",
+      "content_type": 6,
+      "codename": "delete_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+      "name": "Can view user",
+      "content_type": 6,
+      "codename": "view_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+      "name": "Can add budget",
+      "content_type": 7,
+      "codename": "add_budget"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+      "name": "Can change budget",
+      "content_type": 7,
+      "codename": "change_budget"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+      "name": "Can delete budget",
+      "content_type": 7,
+      "codename": "delete_budget"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+      "name": "Can view budget",
+      "content_type": 7,
+      "codename": "view_budget"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+      "name": "Can add transfer",
+      "content_type": 8,
+      "codename": "add_transfer"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+      "name": "Can change transfer",
+      "content_type": 8,
+      "codename": "change_transfer"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+      "name": "Can delete transfer",
+      "content_type": 8,
+      "codename": "delete_transfer"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+      "name": "Can view transfer",
+      "content_type": 8,
+      "codename": "view_transfer"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+      "name": "Can add budget to group relation",
+      "content_type": 9,
+      "codename": "add_budgettogrouprelation"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+      "name": "Can change budget to group relation",
+      "content_type": 9,
+      "codename": "change_budgettogrouprelation"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+      "name": "Can delete budget to group relation",
+      "content_type": 9,
+      "codename": "delete_budgettogrouprelation"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+      "name": "Can view budget to group relation",
+      "content_type": 9,
+      "codename": "view_budgettogrouprelation"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 37,
+    "fields": {
+      "name": "Can add budget group",
+      "content_type": 10,
+      "codename": "add_budgetgroup"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 38,
+    "fields": {
+      "name": "Can change budget group",
+      "content_type": 10,
+      "codename": "change_budgetgroup"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 39,
+    "fields": {
+      "name": "Can delete budget group",
+      "content_type": 10,
+      "codename": "delete_budgetgroup"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 40,
+    "fields": {
+      "name": "Can view budget group",
+      "content_type": 10,
+      "codename": "view_budgetgroup"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 41,
+    "fields": {
+      "name": "Can add budget group to user relation",
+      "content_type": 11,
+      "codename": "add_budgetgrouptouserrelation"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 42,
+    "fields": {
+      "name": "Can change budget group to user relation",
+      "content_type": 11,
+      "codename": "change_budgetgrouptouserrelation"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 43,
+    "fields": {
+      "name": "Can delete budget group to user relation",
+      "content_type": 11,
+      "codename": "delete_budgetgrouptouserrelation"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 44,
+    "fields": {
+      "name": "Can view budget group to user relation",
+      "content_type": 11,
+      "codename": "view_budgetgrouptouserrelation"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": {
+      "app_label": "admin",
+      "model": "logentry"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": {
+      "app_label": "auth",
+      "model": "permission"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": {
+      "app_label": "auth",
+      "model": "group"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": {
+      "app_label": "contenttypes",
+      "model": "contenttype"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": {
+      "app_label": "sessions",
+      "model": "session"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": {
+      "app_label": "customer",
+      "model": "user"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 7,
+    "fields": {
+      "app_label": "budget",
+      "model": "budget"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 8,
+    "fields": {
+      "app_label": "budget",
+      "model": "transfer"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 9,
+    "fields": {
+      "app_label": "budget",
+      "model": "budgettogrouprelation"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 10,
+    "fields": {
+      "app_label": "budget",
+      "model": "budgetgroup"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 11,
+    "fields": {
+      "app_label": "budget",
+      "model": "budgetgrouptouserrelation"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "b8r015woa30qolprsshucv1ozycp1cp4",
+    "fields": {
+      "session_data": ".eJxVjDsOwyAQBe9CHSFgzS9lep8BAcsGJxGWjF1FuXuE5CJp38y8Nwvx2Gs4etnCguzKJLv8binmZ2kD4CO2-8rz2vZtSXwo_KSdzyuW1-10_w5q7HXUMmOWghTB5GwqhBJo0s4Yb8ESOirgoxLKC8pFOtIOtFVgCMiTcOzzBe9dN8Q:1m29zE:jRx96pW1EOZBvJozRSuDhHngncY0Z8t0bc3On42pnA0",
+      "expire_date": "2021-07-24T10:13:28.955Z"
+    }
+  },
+  {
+    "model": "sessions.session",
+    "pk": "xgutkqozfrqkk92btoak5qb194gkgz3v",
+    "fields": {
+      "session_data": ".eJxVjDsOwyAQBe9CHSFgzS9lep8BAcsGJxGWjF1FuXuE5CJp38y8Nwvx2Gs4etnCguzKJLv8binmZ2kD4CO2-8rz2vZtSXwo_KSdzyuW1-10_w5q7HXUMmOWghTB5GwqhBJo0s4Yb8ESOirgoxLKC8pFOtIOtFVgCMiTcOzzBe9dN8Q:1m29WX:VwJfoJ669Xkh18O81rS7m4Le6Wp4kfVMDAtwkLghQ6o",
+      "expire_date": "2021-07-24T09:43:49.128Z"
+    }
+  },
+  {
+    "model": "customer.user",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$260000$F1T61ZnMHhOVvDkAqC09D7$KWxpDcQe6B4w7mvU31qwZRFqbENaXVYii+zdZzL2EXg=",
+      "last_login": "2021-07-10T10:13:28.952Z",
+      "is_superuser": true,
+      "username": "admin",
+      "first_name": "",
+      "last_name": "",
+      "email": "admin@email.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2021-07-10T08:37:46.465Z",
+      "bio": "",
+      "birth_date": null,
+      "groups": [],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "budget.budget",
+    "pk": 1,
+    "fields": {
+      "created_at": "2021-07-10T08:44:53.353Z",
+      "updated_at": "2021-07-10T08:46:08.836Z",
+      "name": "New Budget",
+      "owner": 1
+    }
+  },
+  {
+    "model": "budget.budget",
+    "pk": 2,
+    "fields": {
+      "created_at": "2021-07-12T00:30:41.649Z",
+      "updated_at": "2021-07-12T00:30:41.649Z",
+      "name": "ddd",
+      "owner": 1
+    }
+  },
+  {
+    "model": "budget.budget",
+    "pk": 3,
+    "fields": {
+      "created_at": "2021-07-12T00:30:49.877Z",
+      "updated_at": "2021-07-12T00:30:49.877Z",
+      "name": "dfedf",
+      "owner": 1
+    }
+  },
+  {
+    "model": "budget.budget",
+    "pk": 4,
+    "fields": {
+      "created_at": "2021-07-12T00:30:56.030Z",
+      "updated_at": "2021-07-12T00:30:56.030Z",
+      "name": "sddfdf",
+      "owner": 1
+    }
+  },
+  {
+    "model": "budget.budget",
+    "pk": 5,
+    "fields": {
+      "created_at": "2021-07-12T00:31:00.413Z",
+      "updated_at": "2021-07-12T00:31:00.413Z",
+      "name": "dfvdvs",
+      "owner": 1
+    }
+  },
+  {
+    "model": "budget.budget",
+    "pk": 6,
+    "fields": {
+      "created_at": "2021-07-12T00:31:15.286Z",
+      "updated_at": "2021-07-12T00:31:15.286Z",
+      "name": "sdfsc",
+      "owner": 1
+    }
+  },
+  {
+    "model": "budget.budget",
+    "pk": 7,
+    "fields": {
+      "created_at": "2021-07-12T00:31:21.129Z",
+      "updated_at": "2021-07-12T00:31:21.129Z",
+      "name": "dvdfv",
+      "owner": 1
+    }
+  },
+  {
+    "model": "budget.budgettogrouprelation",
+    "pk": 1,
+    "fields": {
+      "created_at": "2021-07-10T09:13:23.600Z",
+      "updated_at": "2021-07-10T09:13:23.600Z",
+      "group": 1,
+      "budget": 1
+    }
+  },
+  {
+    "model": "budget.budgetgrouptouserrelation",
+    "pk": 3,
+    "fields": {
+      "created_at": "2021-07-11T14:51:22.246Z",
+      "updated_at": "2021-07-11T14:51:22.246Z",
+      "group": 1,
+      "collaborator": 1
+    }
+  },
+  {
+    "model": "budget.budgetgroup",
+    "pk": 1,
+    "fields": {
+      "created_at": "2021-07-10T09:00:45.917Z",
+      "updated_at": "2021-07-11T14:50:55.081Z",
+      "name": "Budget group"
+    }
+  },
+  {
+    "model": "budget.transfer",
+    "pk": 8,
+    "fields": {
+      "created_at": "2021-07-11T15:41:25.517Z",
+      "updated_at": "2021-07-11T15:41:25.517Z",
+      "budget": 1,
+      "transfer_type": "INCOME",
+      "monetary_units": 1000,
+      "currency": "USD",
+      "description": "1000"
+    }
+  },
+  {
+    "model": "budget.transfer",
+    "pk": 9,
+    "fields": {
+      "created_at": "2021-07-11T15:41:37.239Z",
+      "updated_at": "2021-07-11T15:41:37.239Z",
+      "budget": 1,
+      "transfer_type": "OUTCOME",
+      "monetary_units": 11500,
+      "currency": "USD",
+      "description": "1000"
+    }
+  },
+  {
+    "model": "budget.transfer",
+    "pk": 10,
+    "fields": {
+      "created_at": "2021-07-11T16:05:11.862Z",
+      "updated_at": "2021-07-11T16:05:11.862Z",
+      "budget": 1,
+      "transfer_type": "INCOME",
+      "monetary_units": 11500,
+      "currency": "USD",
+      "description": "1000"
+    }
+  }
+]
