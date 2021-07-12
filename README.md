@@ -18,6 +18,13 @@ docker-compose up -d
 python manage.py runserver
 ```
 
+after that:
+
+- admin site will be available under http://localhost:8000/admin/
+- browsable api site will be available under http://localhost:8000/api/
+
+to access thet site you need to create a superuser
+
 ## to create a superuser
 
 ```shell
@@ -30,4 +37,10 @@ and follow script instructions
 
 ```shell
 python manage.py loaddata fixtures/test.json
+```
+
+## how to run unit tests
+
+```shell
+python manage.py test
 ```
