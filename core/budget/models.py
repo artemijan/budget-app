@@ -1,4 +1,7 @@
 # Create your models here.
+import math
+from decimal import Decimal
+
 from django.db import models
 from django.utils.functional import cached_property
 from django.utils.translation import ugettext_lazy as _
@@ -57,9 +60,18 @@ class Transfer(AbstractAuditableModel):
     currency = models.CharField(_("Currency iso alpha 3"), max_length=3, choices=Currency.choices())
     description = models.CharField(_("Description of the transfer"), max_length=255, blank=True, null=True)
 
+    def __init__(self, *args, **kwargs):
+        amount = kwargs.pop('amount', None)
+        if amount is not None:
+            kwargs.update({'monetary_units': self.amount_to_monetary_units(amount)})
+        super().__init__(*args, **kwargs)
+
     def __str__(self):
         return f"{self.transfer_type} transfer of {self.currency.upper()}{self.amount}"
 
     @property
     def amount(self):
         return self.monetary_units / self.PRECISION
+
+    def amount_to_monetary_units(self, amount: Decimal):
+        return math.trunc(amount * self.PRECISION)
