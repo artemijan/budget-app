@@ -32,6 +32,12 @@ class BudgetSerializer(NestedHyperlinkedModelSerializer):
         fields = ('url', 'name', 'groups', 'owner', 'transfers')
 
 
+class BudgetCreateSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Budget
+        fields = ('name', 'owner')
+
+
 class BudgetGroupSerializer(NestedHyperlinkedModelSerializer):
     budgets = serializers.StringRelatedField(many=True, allow_empty=True)
     collaborators = CollaboratorSerializer(many=True)

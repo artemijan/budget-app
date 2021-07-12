@@ -1,6 +1,7 @@
 # Create your views here.
 from rest_framework import viewsets
-from core.budget.dto import BudgetSerializer, BudgetGroupSerializer, TransferSerializer, CollaboratorSerializer
+from core.budget.dto import BudgetSerializer, BudgetGroupSerializer, TransferSerializer, CollaboratorSerializer, \
+    BudgetCreateSerializer
 from core.budget.models import Budget, BudgetGroup, Transfer
 from core.customer.models import User
 
@@ -22,6 +23,11 @@ class CollaboratorsViewSet(viewsets.ModelViewSet):
 class BudgetViewSet(viewsets.ModelViewSet):
     queryset = Budget.objects.all()
     serializer_class = BudgetSerializer
+
+    def get_serializer_class(self):
+        if self.request.method == 'POST':
+            return BudgetCreateSerializer
+        return self.serializer_class
 
 
 class BudgetGroupViewSet(viewsets.ModelViewSet):
